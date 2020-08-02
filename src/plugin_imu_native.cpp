@@ -19,14 +19,14 @@ namespace gazebo
         }
 
         this->node_handle_ = transport::NodePtr(new transport::Node());
-        this->pub = node_handle_->Advertise<msgs::Vector3d>(this->topicName);
+        this->pub = node_handle_->Advertise<msgs::IMU>(this->topicName);
         this->updated_conn_ = this->imu_->ConnectUpdated(boost::bind(&myImuPlugin::onUpdated, this));
     }
 
     void myImuPlugin::onUpdated()
     {
-        this->imu_msg_ = this->imu_->ImuMessage();
-        this->pub->Publish(imu_msg_);
+        msgs::IMU imu_msg = this->imu_->ImuMessage();
+        this->pub->Publish(imu_msg);
         gzerr << "imu plugin onUpdated() called\n";
     }
 

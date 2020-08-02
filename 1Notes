@@ -1,3 +1,4 @@
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/home/rishi/gitHUB/simdrone_gazebo/build/
 ################## 2. A simple model controller for the quadrotor #############
 add_library( plugin_drone SHARED
     src/plugin_drone.cpp
