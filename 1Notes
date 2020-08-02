@@ -1,0 +1,15 @@
+################## 2. A simple model controller for the quadrotor #############
+add_library( plugin_drone SHARED
+    src/plugin_drone.cpp
+    src/pid_controller.cpp
+    include/plugin_drone.h
+    include/pid_controller.h
+)
+
+################## 3. A IMU sensor plugin for the quadrotor ####################
+add_library( plugin_ros_imu SHARED
+    src/plugin_ros_imu_native.cpp
+    include/plugin_ros_imu_native.h
+)
+
+
