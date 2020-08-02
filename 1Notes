@@ -13,3 +13,9 @@ add_library( plugin_ros_imu SHARED
 )
 
 
+You will get orientation values, linear acceleration, and angular velocity from this IMU plugin.
+
+
+
+
+

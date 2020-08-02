@@ -3,14 +3,12 @@
 
 #include "gazebo/common/Plugin.hh"
 #include "gazebo/gazebo.hh"
-#include "sensor_msgs/Imu.h"
-#include <ros/ros.h>
 
 namespace gazebo {
-class RosImuPlugin: public SensorPlugin{
+class myImuPlugin: public SensorPlugin{
 public:
-    RosImuPlugin(){topicName = "drone/imu";}
-    virtual ~RosImuPlugin(){}
+    myImuPlugin(){topicName = "drone/imu";}
+    virtual ~myImuPlugin(){}
     
     virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
     virtual void onUpdated();
@@ -19,9 +17,9 @@ protected:
     sensors::ImuSensorPtr imu_;
     event::ConnectionPtr updated_conn_;
     
-    sensor_msgs::Imu imu_msg_;
-    ros::NodeHandle* node_handle_;
-    ros::Publisher pub_;
+    msgs::IMU imu_msg_;
+    transport::NodePtr node_handle_;
+    transport::PublisherPtr pub ;
     std::string topicName;
 };
 }
