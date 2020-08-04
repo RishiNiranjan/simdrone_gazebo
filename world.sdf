@@ -13,9 +13,8 @@
     <!-- A testing model that includes the Velodyne sensor model -->
     <model name='sjtu_drone'>
 
-    <!--plugin name='simple_drone' filename='libplugin_drone.so'>
+    <plugin name='simple_drone' filename='libplugin_drone.so'>
       <bodyName>base_link</bodyName>
-      <imuTopic>/drone/imu</imuTopic>
       <rollpitchProportionalGain>10.0</rollpitchProportionalGain>
       <rollpitchDifferentialGain>5.0</rollpitchDifferentialGain>
       <rollpitchLimit>0.5</rollpitchLimit>
@@ -39,7 +38,7 @@
       <motionSmallNoise>0.05</motionSmallNoise>
       <motionDriftNoise>0.03</motionDriftNoise>
       <motionDriftNoiseTime>5.0</motionDriftNoiseTime>
-    </plugin-->
+    </plugin>
 
       <!-- pose of the quadrotor in the world frame -->
       <pose>0 0 0.04 0 0 0</pose>

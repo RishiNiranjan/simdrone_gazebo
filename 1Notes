@@ -18,5 +18,25 @@ You will get orientation values, linear acceleration, and angular velocity from 
 
 
 
+// Reset the controller
+void DroneSimpleController::Reset()
+{
+  controllers_.roll.reset();
+  controllers_.pitch.reset();
+  controllers_.yaw.reset();
+  controllers_.velocity_x.reset();
+  controllers_.velocity_y.reset();
+  controllers_.velocity_z.reset();
 
+  link->SetForce(ignition::math::Vector3d(0,0,0));
+  link->SetTorque(ignition::math::Vector3d(0,0,0));
+
+  // reset state
+  pose.Reset();
+  velocity.Set();
+  angular_velocity.Set();
+  acceleration.Set();
+  euler.Set();
+  state_stamp = ros::Time();
+}
 

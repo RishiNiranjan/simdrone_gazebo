@@ -11,7 +11,7 @@ namespace gazebo
     public:
         myImuPlugin()
         {
-            topicName = "drone/imu";
+            topicName = "/drone/imu";
         }
         virtual ~myImuPlugin() {}
 

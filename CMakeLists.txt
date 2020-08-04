@@ -11,7 +11,14 @@ add_library( plugin_imu_native SHARED
     src/plugin_imu_native.cpp
     src/plugin_imu_native.h
     )
-target_link_libraries(plugin_imu_native ${GAZEBO_LIBRARIES})
+target_link_libraries(plugin_imu_native ${GAZEBO_LIBRARIES} )
 
+add_library( plugin_drone SHARED
+    src/plugin_drone.cpp
+    src/pid_controller.cpp
+    src/plugin_drone.h
+    src/pid_controller.h
+)
 
+target_link_libraries( plugin_drone ${GAZEBO_LIBRARIES} )
 

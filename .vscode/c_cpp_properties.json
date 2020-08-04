@@ -4,10 +4,10 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/gazebo-11",
                 "/usr/include/ignition/**",
                 "/usr/include/sdformat-6.2/**",
-                "/usr/include/sdformat-9.2"
+                "/usr/include/sdformat-9.2",
+                "/home/rishi/gitHUB/gazebo/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
