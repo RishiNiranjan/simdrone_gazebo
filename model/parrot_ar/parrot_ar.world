@@ -60,7 +60,7 @@
         <visual name='visual'>
           <geometry>
             <mesh>
-              <uri>file://model/quadrotor_4.dae</uri>
+		    <uri>file://model/parrot_ar/quadrotor_4.dae</uri>
             </mesh>
           </geometry>
         </visual>
@@ -68,7 +68,7 @@
         <collision name='collision'>
           <geometry>
             <mesh>
-              <uri>file://model/quadrotor_4.dae</uri>
+		    <uri>file://model/parrot_ar/quadrotor_4.dae</uri>
             </mesh>
           </geometry>
         </collision>

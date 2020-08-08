@@ -1,0 +1,3 @@
+export LD_LIBRARY_PATH=:/home/rishi/gitHUB/simdrone_gazebo/build/
+
+gazebo -u --verbose model/parrot_ar/parrot_ar.world
