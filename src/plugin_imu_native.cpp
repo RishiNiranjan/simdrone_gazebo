@@ -9,7 +9,7 @@ namespace gazebo
             gzerr << "Invalid sensor pointer.\n";
 
         this->imu_ = std::dynamic_pointer_cast<sensors::ImuSensor>(_sensor);
-        this->imu_->SetUpdateRate(1.0);
+        //this->imu_->SetUpdateRate(1.0);
         
         this->node_handle_ = transport::NodePtr(new transport::Node());
         this->node_handle_->Init();

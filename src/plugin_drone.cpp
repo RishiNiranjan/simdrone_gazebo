@@ -67,12 +67,12 @@ namespace gazebo
     this->node->Init();
 
     // subscribe imu
-    // if (!imu_topic_.empty())
-    // {
-    //   this->imu_subscriber_ = this->node->Subscribe(imu_topic_, &DroneSimpleController::ImuCallback, this);
-    //   if (this->imu_subscriber_)
-    //     gzdbg << "subscribed to /drone/imu\n";
-    // }
+    if (!imu_topic_.empty())
+    {
+      this->imu_subscriber_ = this->node->Subscribe(imu_topic_, &DroneSimpleController::ImuCallback, this);
+      if (this->imu_subscriber_)
+        gzdbg << "subscribed to /drone/imu\n";
+    }
 
     LoadControllerSettings(_model, _sdf);
 
@@ -91,9 +91,6 @@ namespace gazebo
     pose.Rot().Set(imu->orientation().w(), imu->orientation().x(), imu->orientation().y(), imu->orientation().z());
     euler = pose.Rot().Euler();
     angular_velocity = pose.Rot().RotateVector(ignition::math::Vector3d(imu->angular_velocity().x(), imu->angular_velocity().y(), imu->angular_velocity().z()));
-    gzwarn << pose << "\n";
-    gzwarn << euler << "\n";
-    gzwarn << angular_velocity << "\n";
   }
 
   void DroneSimpleController::Update()
