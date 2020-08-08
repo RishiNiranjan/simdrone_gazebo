@@ -12,3 +12,4 @@ The project is to about flying/controlling the quadcopter by getting IMU sensor 
 The project does not require ROS installation.
 
 
+![alt text](https://github.com/RishiNiranjan/simdrone_gazebo/tree/master/images/Screenshot from 2020-08-08 17-13-53.png?raw=true)
