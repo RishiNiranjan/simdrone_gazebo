@@ -3,7 +3,7 @@ Work in Progress.
 
 Im a beginner to GAZIBO and quadcopter simulation.
 
-Nature mother develops gradually.
+Nature mother progresses gradually.
 
 Birds, Bees, Dragonfly and other fying souls do not know mathematical formulas calculas. They learn things gradually. They fall-->try-->fall->>try-->fall-->flyy.
 
