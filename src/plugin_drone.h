@@ -45,6 +45,7 @@ namespace gazebo
 
     transport::NodePtr node;
 
+    msgs::Twist cmd_val;
     // ros::CallbackQueue callback_queue_;
     // ros::Subscriber cmd_subscriber_;
     // ros::Subscriber posctrl_subscriber_;
@@ -65,7 +66,7 @@ namespace gazebo
     // callback functions for subscribers
     // void CmdCallback(const geometry_msgs::TwistConstPtr &);
     // void PosCtrlCallback(const std_msgs::BoolConstPtr &);
-    void ImuCallback(const ConstIMUPtr &);
+    void ImuCallback(ConstIMUPtr &);
     // void TakeoffCallback(const std_msgs::EmptyConstPtr &);
     // void LandCallback(const std_msgs::EmptyConstPtr &);
     // void ResetCallback(const std_msgs::EmptyConstPtr &);

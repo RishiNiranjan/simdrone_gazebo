@@ -22,9 +22,8 @@ namespace gazebo
         sensors::ImuSensorPtr imu_;
         event::ConnectionPtr updated_conn_;
 
-        msgs::IMU imu_msg_;
         transport::NodePtr node_handle_;
-        transport::PublisherPtr pub;
+        transport::PublisherPtr imuPub;
         std::string topicName;
     };
 } // namespace gazebo
