@@ -86,7 +86,6 @@ namespace gazebo
 
   void DroneSimpleController::ImuCallback(ConstIMUPtr &imu)
   {
-    gzdbg << "imucllback subscriber called" << "\n";
     //directly read the quternion from the IMU data
     pose.Rot().Set(imu->orientation().w(), imu->orientation().x(), imu->orientation().y(), imu->orientation().z());
     euler = pose.Rot().Euler();
