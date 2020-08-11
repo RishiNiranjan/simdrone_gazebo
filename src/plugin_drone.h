@@ -50,6 +50,7 @@ namespace gazebo
     // ros::Subscriber cmd_subscriber_;
     // ros::Subscriber posctrl_subscriber_;
     transport::SubscriberPtr imu_subscriber_;
+    transport::SubscriberPtr cmd_subscriber_;
     sensors::ImuSensorPtr imu_;
 
     // extra robot control command
@@ -64,7 +65,7 @@ namespace gazebo
 
     // geometry_msgs::Twist cmd_val;
     // callback functions for subscribers
-    // void CmdCallback(const geometry_msgs::TwistConstPtr &);
+    void CmdCallback(ConstTwistPtr &);
     // void PosCtrlCallback(const std_msgs::BoolConstPtr &);
     void ImuCallback(ConstIMUPtr &);
     // void TakeoffCallback(const std_msgs::EmptyConstPtr &);

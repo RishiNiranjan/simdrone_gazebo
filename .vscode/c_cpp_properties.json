@@ -7,7 +7,8 @@
                 "/usr/include/ignition/**",
                 "/usr/include/sdformat-6.2/**",
                 "/usr/include/sdformat-9.2",
-                "/home/rishi/gitHUB/gazebo/**"
+                "/home/rishi/gitHUB/gazebo/**",
+                "/usr/include/gazebo-11"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
